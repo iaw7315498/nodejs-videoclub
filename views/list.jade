@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+  head
+    title listAll
+  body
+    h1 Listar películas
+
+    each val in arraysPelis
+      p
+        b #{val.titol}
+        span , identificador de pelicula 
+        b #{val.codpeli}
+        div #{val.sinopsi}
+        br
+    a(href='/') inicio

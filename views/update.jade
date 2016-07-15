@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    title update
+  body
+    h1 Actualizar película
+    
+    if idpeli
+      form(action='/update', method='get')
+        p titulo de la peli
+          input(type='text', name='titol', size='34', value="#{nombrePeli}")
+          input(type='text', name='codpeli', size='3', style='display: none', value="#{idpeli}")
+        p sinopsi
+          textarea(type='text', name='sinopsi', cols='40', rows='8') #{sinopsi}
+        
+        input(type='submit', value='actualizar', name='boto')
+      br
+      a(href='/update') atras
+    else
+      each val in arraysPelis
+        a(href="/update?_id="+val._id) #{val.titol}
+        br
+    br
+
+    a(href='/') inicio
+

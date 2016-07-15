@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+  head
+    title delete
+  body
+    h1 Borrar película
+    
+    each val in arraysPelis
+      a(href="?_id="+val._id) #{val.titol}
+      br
+    br
+    a(href='/') inicio
+

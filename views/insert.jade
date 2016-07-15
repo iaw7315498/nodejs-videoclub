@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    title insert
+  body
+    h1 Insertar película
+    if title != ""
+      p rellena los siguientes datos para añadir tu película
+      form(action='/insert/', method='get')
+        p titulo de la peli
+          input(type='text', name='titol', size='34')
+        p sinopsi
+          textarea(type='text', name='sinopsi', cols='40', rows='8')
+        
+        input(type='submit', value='insertar', name='boto')
+      br
+    else
+      a(href='/list') ver películas
+    a(href='/') volver
